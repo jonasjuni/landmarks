@@ -13,11 +13,10 @@ struct LandmarkList: View {
     
     var filteredLandmarks: [Landmark] {
         modelData.landmarks.filter { (!showFavoritesOnly || $0.isFavorite) }
-        
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 Toggle(isOn: $showFavoritesOnly) {
                     Text("Favorites only")
@@ -31,6 +30,13 @@ struct LandmarkList: View {
                 }
             }
             .navigationTitle("Landmarks")
+            .toolbar {
+                Button {
+                    print("TEst")
+                } label: {
+                    Label("Add", systemImage: "plus")
+                }
+            }
         }
     }
 }
