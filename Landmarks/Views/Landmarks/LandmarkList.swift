@@ -31,10 +31,12 @@ struct LandmarkList: View {
             }
             .navigationTitle("Landmarks")
             .toolbar {
-                Button {
-                    print("TEst")
-                } label: {
-                    Label("Add", systemImage: "plus")
+                ToolbarItem {
+                    Button {
+                        print("TEst")
+                    } label: {
+                        Label("Add", systemImage: "plus")
+                    }
                 }
             }
         }
