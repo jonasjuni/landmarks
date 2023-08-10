@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+extension AnyTransition {
+    static var moveAndFade: AnyTransition {
+        .asymmetric(
+            insertion: .move(edge: .trailing).combined(with: .opacity),
+            removal: .scale.combined(with: .opacity)
+        )
+    }
+}
+
 struct HikeView: View {
     let hike: Hike
     @State private var showDetails = false
@@ -24,17 +33,21 @@ struct HikeView: View {
                 Spacer()
                 
                 Button {
-                    showDetails.toggle()
+                    withAnimation {
+                        showDetails.toggle()
+                    }
                 } label: {
                     Label("Graph", systemImage: "chevron.right.circle")
                         .labelStyle(.iconOnly)
                         .imageScale(.large)
                         .rotationEffect(.degrees(showDetails ? 90: 0))
+                        .scaleEffect(showDetails ? 1.5 : 1)
                         .padding()
                 }
             }
             if showDetails {
                 HikeDetail(hike: hike)
+                    .transition(.moveAndFade)
             }
         }
     }
@@ -43,6 +56,11 @@ struct HikeView: View {
 struct HikeView_Previews: PreviewProvider {
     static var hike = ModelData().hikes[0]
     static var previews: some View {
-        HikeView(hike: hike)
+        VStack {
+            HikeView(hike: hike)
+                .padding()
+            Spacer()
+        }
+        
     }
 }
