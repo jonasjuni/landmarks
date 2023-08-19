@@ -30,15 +30,6 @@ struct LandmarkList: View {
                 }
             }
             .navigationTitle("Landmarks")
-            .toolbar {
-                ToolbarItem {
-                    Button {
-                        print("TEst")
-                    } label: {
-                        Label("Add", systemImage: "plus")
-                    }
-                }
-            }
         }
     }
 }
