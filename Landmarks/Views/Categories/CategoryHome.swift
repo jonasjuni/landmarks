@@ -25,6 +25,7 @@ struct CategoryHome: View {
                 .listRowInsets(EdgeInsets())
             }
             .navigationTitle("Featured")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }

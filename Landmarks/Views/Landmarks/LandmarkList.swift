@@ -29,6 +29,7 @@ struct LandmarkList: View {
                     }
                 }
             }
+            .navigationBarTitleDisplayMode(.large)
             .navigationTitle("Landmarks")
         }
     }

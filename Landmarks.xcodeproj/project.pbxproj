@@ -120,8 +120,8 @@
 		AA0AE1EB2A7CA6440074A8E3 /* Landmarks */ = {
 			isa = PBXGroup;
 			children = (
-				AADAEDB52A79C8E700D4F0F3 /* LandmarkRow.swift */,
 				AADAEDB72A79CBCC00D4F0F3 /* LandmarkList.swift */,
+				AADAEDB52A79C8E700D4F0F3 /* LandmarkRow.swift */,
 				AADAEDB92A79D1A300D4F0F3 /* LandmarkDetail.swift */,
 			);
 			path = Landmarks;
