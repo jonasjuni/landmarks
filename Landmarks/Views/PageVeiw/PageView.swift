@@ -12,26 +12,12 @@ struct PageView<Page: View>: View {
     @State private var currentPage = 0
     
     var body: some View {
-        VStack {
+        ZStack(alignment: .bottomTrailing) {
             PageViewController(pages: pages, currentPage: $currentPage)
-            Text("Current Page: \(currentPage)")
+            PageControl(numberOfPages: pages.count, currentPage: $currentPage)
+                .frame(width: CGFloat(pages.count * 18))
+                .padding(.trailing)
             
-            HStack {
-                Button {
-                    currentPage = currentPage - 1 < 0 ? 2 : currentPage - 1
-                } label: {
-                    Label("Previous", systemImage: "chevron.backward")
-                        .labelStyle(.iconOnly)
-                }
-                
-                Button {
-                    currentPage = (currentPage + 1) % 3
-                } label: {
-                    Label("Next", systemImage: "chevron.forward")
-                        .labelStyle(.iconOnly)
-                }
-            }
-            .padding()
         }
     }
 }
