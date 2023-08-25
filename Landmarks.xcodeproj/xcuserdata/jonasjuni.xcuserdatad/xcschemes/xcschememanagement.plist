@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Dynamic Notifications.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Landmarks.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +33,21 @@
 			<true/>
 		</dict>
 		<key>AA33A15D29ECA5AA00715138</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA545B972A97D5B600F4BCF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA545BA62A97D5B700F4BCF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA545BB02A97D5B700F4BCF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
