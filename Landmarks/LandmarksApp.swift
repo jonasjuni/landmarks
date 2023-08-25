@@ -6,10 +6,20 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 @main
 struct LandmarksApp: App {
     @StateObject private var modelData = ModelData()
+    let center = UNUserNotificationCenter.current()
+    
+    init() {
+        center.requestAuthorization(options: [.alert, .sound, .badge], completionHandler: { (granted, error) in
+            if let error: Error {
+                print(error)
+            }
+        })
+    }
     
     var body: some Scene {
         WindowGroup {
