@@ -34,7 +34,7 @@ struct LandmarkDetail: View {
                 Text(landmark.state)
                     .font(.caption)
                 Divider()
-                MapView(coordinates: landmark.locationCoordinates)
+                MapView(coordinate: landmark.locationCoordinates)
                     .scaledToFit()
             }
             .padding(16)

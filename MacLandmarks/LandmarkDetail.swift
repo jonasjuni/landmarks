@@ -20,7 +20,7 @@ struct LandmarkDetail: View {
     var body: some View {
         ScrollView {
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .top)) {
-                MapView(coordinates: landmark.locationCoordinates)
+                MapView(coordinate: landmark.locationCoordinates)
                     .ignoresSafeArea(edges: .top)
                     .frame(height: 300)
                 Button("Open in Maps") {
