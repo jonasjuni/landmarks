@@ -1,2 +1,2 @@
 # landmarks
-SwiftUI first tutorial
+SwiftUI first multi-plataform application supporting iOS, whatOS and macOS 
